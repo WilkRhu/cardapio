@@ -1,0 +1,32 @@
+#cabecalho {
+    height: 35vh;
+    background-image: url("../../assets/img/cabecalho.jpg");
+    background-position: 50%;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0;
+}
+
+#efeito {
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    bottom: 0;
+    padding-top: .8rem;
+}
+
+#container-logo{
+    height: 100%;
+}
+
+
+#logomarca {
+    height: 30vh;
+    margin: 0 auto;
+    background:url("../../assets/img/01.png")no-repeat;
+    background-size: 12rem;
+    background-position: 50%;
+    background-position-x: 50%;
+    background-position-y: center;
+}
+
+

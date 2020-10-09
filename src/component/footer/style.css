@@ -1,0 +1,32 @@
+#footer{
+    min-height: 15vh;
+    background-color: black;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    padding: 0;
+}
+
+#linha-footer{
+    height: 12px;
+    background-color: rgb(245, 134, 52);
+}
+
+
+#logo-fotter{
+    width: 140px;
+    height: 140px;
+    top: 10px;
+    margin: 0 auto;
+    background-image: url("../../assets/img/image18.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+}
+
+#contatos{
+    color: rgb(245, 134, 52);
+    font-family: century gothic;
+    font-size: 0.8rem;
+    padding-top: 10px;
+}
