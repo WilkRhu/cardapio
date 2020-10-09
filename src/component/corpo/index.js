@@ -9,14 +9,16 @@ AOS.init();
 export default function Corpo(){
     const [post, setPost] = useState([]);
     const [cake, setCake] = useState([]);
+    const [loading, setLoadin] = useState(false);
 
     useEffect(()=>{
         function Post(){
             setInterval(async () => {
                 const response = await api.get("/food?_embed");
                 setPost(response.data);
+                setLoadin(true);
             }, 5000);
-            
+            setLoadin(false);
         }
         Post();
     },[]);
@@ -67,8 +69,9 @@ export default function Corpo(){
                 Delícias do Dia
             </div>
             <div className="row">
+              {loading === false ? <div className="giff"></div> : ""}
                 {post.map((item, indice)=>(
-                <div className="col" id="box-card">
+                  <div className="col" id="box-card">
                   <div className="card" id="cards">
                   <img class="card-img-top" 
                   src={`${item._embedded["wp:featuredmedia"] ? item._embedded["wp:featuredmedia"][0].source_url : ""}`} 
@@ -96,9 +99,8 @@ export default function Corpo(){
                       </a>
                     </div>
                   </div>
-                ))}
-                  
-            </div>            
+                ))}      
+            </div>     
         </div>
     );
 }
